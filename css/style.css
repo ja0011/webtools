@@ -30,7 +30,7 @@ header h1 {
 
 /* Footer Styles */
 footer {
-  background-color: #911212;    /* Darker footer background */
+  background-color: #1f0d0d;    /* Darker footer background */
   color: #fff;               /* White text for contrast */
   text-align: center;         /* Center align footer content */
   padding: 15px;
@@ -56,11 +56,11 @@ h2 {
 p {
   font-size: 1rem;          /* Normal text size */
   line-height: 1.6;         /* Space between lines for readability */
-  margin-bottom: 20px;      /* Space between paragraphs */
+  margin-bottom: 25px;      /* Space between paragraphs */
 }
 
 /* Link Styles */
-a {
+a:link{
   color: #036dd8;           /* Blue link color */
   text-decoration: none;    /* Remove underline */
 }
@@ -72,4 +72,9 @@ a:visited {
 a:hover {
   color: #ff6600;           /* Orange on hover */
   text-decoration: underline; /* Underline on hover for visibility */
+}
+
+main, section, ul, li {
+  margin: 2px;     /* Add margin around these elements */
+  padding: 10px;    /* Add padding inside these elements */
 }
