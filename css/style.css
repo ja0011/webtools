@@ -27,14 +27,19 @@ header h1 {
   margin-bottom: 10px;        /* Space between header and next element */
 }
 
-
 /* Footer Styles */
-footer {
+.index-page footer {
   background-color: #1f0d0d;    /* Darker footer background */
-  color: #fff;               /* White text for contrast */
-  text-align: center;         /* Center align footer content */
+  color: #f5efef;                  /* White text for contrast */
+  text-align: center;           /* Center align footer content */
   padding: 15px;
-  font-size: 0.875rem;        /* Smaller text in footer */
+  font-size: 0.875rem;          /* Smaller text in footer */
+}
+
+/* Footer for Contact and About Pages (remove footer styles or set custom ones) */
+.contact-page footer,
+.about-page footer {
+  display: none;                /* This removes the footer from contact and about pages */
 }
 
 /* Typography for Headings */
@@ -60,7 +65,7 @@ p {
 }
 
 /* Link Styles */
-a:link{
+a:link {
   color: #036dd8;           /* Blue link color */
   text-decoration: none;    /* Remove underline */
 }
