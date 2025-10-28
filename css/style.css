@@ -1,46 +1,40 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; /* Ensures padding and border are included in width/height */
-}
-
-/* Body Styles */
 body {
-  background-color: #f4f4f4;  /* Light background color */
-  color: #333;                /* Dark text for readability */
-  font-family: 'Arial', sans-serif;  /* Default sans-serif font */
-  padding: 20px;              /* Padding inside the body */
-  line-height: 1.6;           /* Increased line height for readability */
+    font-family: "Lucida Console", "Courier New", monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color:#808080;
+    line-height: 2;
 }
 
 /* Header Styles */
 header {
-  background-color: #130e0e;    /* Dark background */
+  background-color: #6B8E99;    /* Dark background */
   color: #f8f7f7;               /* White text for contrast */
   text-align: center;         /* Center align header content */
-  padding: 50px;
+  padding: 47px;
 }
 
-header h1 {
-  font-size: 2.5rem;          /* Larger font for main header */
-  margin-bottom: 10px;        /* Space between header and next element */
-}
+.main-nav{
+background-color: #6B8E99;
 
+}
 /* Footer Styles */
-.index-page footer {
+footer {
   background-color: #1f0d0d;    /* Darker footer background */
   color: #f5efef;                  /* White text for contrast */
   text-align: center;           /* Center align footer content */
-  padding: 15px;
-  font-size: 0.875rem;          /* Smaller text in footer */
+  padding: 1rem 0;
+  font-size: 2rem;
+  margin-top: 2rem;          
 }
 
-/* Footer for Contact and About Pages (remove footer styles or set custom ones) */
-.contact-page footer,
-.about-page footer {
-  display: none;                /* This removes the footer from contact and about pages */
+header h1 {
+  font-size: 4rem;          /* Larger font for main header */
+  margin-bottom: 0rem;  
+  font-family: 'VT323', monospace;     
 }
+
 
 /* Typography for Headings */
 h1, h2, h3, h4, h5, h6 {
@@ -79,7 +73,4 @@ a:hover {
   text-decoration: underline; /* Underline on hover for visibility */
 }
 
-main, section, ul, li {
-  margin: 2px;     /* Add margin around these elements */
-  padding: 10px;    /* Add padding inside these elements */
-}
+

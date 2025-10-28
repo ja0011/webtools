@@ -2,10 +2,22 @@ html, body * {
     box-sizing: border-box;
 }
 
+.main-nav {
+    display: block;
+    width: 100%;
+    padding-bottom: .1rem;
+    position: fixed;
+    top: 10;
+    margin: 0;
+    text-align: center;
+    z-index: 2;
+}
+
 .main-content{
-    padding: 1 rem;
+    padding: 1rem;
+    width: 60vw;
     max-width: 800px;
-    margin: auto;
+    margin: 0 21vw 0 10vw;
 }
 
 .page-header{
