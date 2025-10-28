@@ -73,4 +73,20 @@ a:hover {
   text-decoration: underline; /* Underline on hover for visibility */
 }
 
+/* Smaller, tighter footer for contact/about */
+.plain-footer {
+  font-size: 1rem;
+  line-height: 1.4;
+  padding: 0.75rem 0;
+}
+
+.plain-footer ul {
+  margin: 0;
+  padding: 0;
+}
+
+.plain-footer li {
+  margin: 0.25rem 0;
+}
+
 
