@@ -73,6 +73,10 @@ a:hover {
   text-decoration: underline; /* Underline on hover for visibility */
 }
 
+/* Keep content visible under fixed nav; make images fluid */
+body { padding-top: 56px; }
+img { max-width: 100%; height: auto; }
+
 /* Smaller, tighter footer for contact/about */
 .plain-footer {
   font-size: 1rem;
@@ -88,5 +92,3 @@ a:hover {
 .plain-footer li {
   margin: 0.25rem 0;
 }
-
-

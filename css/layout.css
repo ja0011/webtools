@@ -7,7 +7,7 @@ html, body * {
     width: 100%;
     padding-bottom: .1rem;
     position: fixed;
-    top: 10;
+    top: 0; /* valid offset for fixed nav */
     margin: 0;
     text-align: center;
     z-index: 2;
@@ -16,18 +16,53 @@ html, body * {
 .main-content{
     padding: 1rem;
     width: 60vw;
-    max-width: 800px;
-    margin: 0 21vw 0 10vw;
+    max-width: 700px;
+    margin: auto;
 }
 
 .page-header{
     text-align: center;
     margin-bottom: 2rem;
+    z-index: 1;
 }
 
-.sidebar{
-    background-color: aqua;
-    padding: 1rem;
-    margin-top: 1rem 15vw 1rem 0;
-    float: right;
+.sidebar {
+  background-color: #f4f4f4;
+  padding: .1rem;
+  position: fixed;  /* Keeps the sidebar fixed in place */
+  top: 1;  /* Sticks it to the top of the screen */
+  right: 0;  /* Positions it on the right side */
 }
+
+
+
+
+.figure-right {
+    max-width: 55%;
+    height: auto;
+    float: right;
+    padding: 0 0 0 2rem;
+}
+
+.figure-left {
+    max-width: 55%;
+    height: auto;
+    float: left;
+    padding: 2rem 2rem 2rem 0;
+}
+
+.clearfix::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+/* Mobile layout: stack sidebar and content */
+@media (max-width: 768px) {
+  .sidebar { float: none; width: auto; margin: 1rem 0; }
+  .main-content { width: auto; max-width: 100%; margin: 0 1rem; padding: 1rem; }
+  .figure-right, .figure-left { float: none; max-width: 100%; padding: 0; }
+}
+
+/* (intentionally no wide-screen reservation here; pre-overlap state) */
+
