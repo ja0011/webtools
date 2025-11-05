@@ -29,6 +29,21 @@ footer {
   margin-top: 2rem;          
 }
 
+.plain-footer {
+  font-size: 1rem;
+  line-height: 1.4;
+  padding: 0.75rem 0;
+}
+
+.plain-footer ul {
+  margin: 0;
+  padding: 0;
+}
+
+.plain-footer li {
+  margin: 0.25rem 0;
+}
+
 header h1 {
   font-size: 4rem;          /* Larger font for main header */
   margin-bottom: 0rem;  
@@ -88,7 +103,7 @@ body {
 }
 
 /* Main Form Container */
-section {
+.contact-page section {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
@@ -99,7 +114,7 @@ section {
 }
 
 /* Label Styling */
-label {
+.contact-page label {
     font-size: 16px;
     margin-bottom: 8px;
     display: block;
@@ -107,7 +122,7 @@ label {
 }
 
 /* Input Fields (Name, Email) */
-input[type="text"], input[type="email"] {
+.contact-page input[type="text"], .contact-page input[type="email"] {
     margin-top: 5px;
     margin-bottom: 15px;
     padding: 12px; /* Increased padding for bigger input */
@@ -118,7 +133,7 @@ input[type="text"], input[type="email"] {
 }
 
 /* Textarea (Message) */
-textarea {
+.contact-page textarea {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
@@ -130,7 +145,7 @@ textarea {
 }
 
 /* Dropdown and Radio Buttons */
-select, input[type="radio"] {
+.contact-page select, .contact-page input[type="radio"] {
     margin-top: 5px;
     margin-bottom: 15px;
     padding: 8px;
@@ -139,20 +154,20 @@ select, input[type="radio"] {
     border-radius: 4px;
 }
 
-input[type="radio"] {
+.contact-page input[type="radio"] {
     width: auto;
     margin-right: 10px;
 }
 
 /* Radio Button Label Styling */
-input[type="radio"] + label {
+.contact-page input[type="radio"] + label {
     display: inline-block;
     margin-right: 15px;
     font-size: 16px;
 }
 
 /* Submit and Reset Buttons */
-button {
+.contact-page button {
     background-color: #002b02;
     color: white;
     border: none;
@@ -165,15 +180,15 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button[type="reset"] {
+.contact-page button[type="reset"] {
     background-color: #610801;
 }
 
-button:hover {
+.contact-page button:hover {
     background-color: #d9e2da;
 }
 
-button[type="reset"]:hover {
+.contact-page button[type="reset"]:hover {
     background-color: #110100;
 }
 
@@ -188,7 +203,7 @@ body {
 }
 
 /* Table Styling */
-table {
+.contact-page table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
@@ -197,7 +212,7 @@ table {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-caption {
+.contact-page caption {
     font-size: 1.5rem;
     margin-bottom: 10px;
     font-weight: bold;
@@ -209,36 +224,36 @@ caption {
     border-top-right-radius: 8px;
 }
 
-th, td {
+.contact-page th, .contact-page td {
     padding: 15px;
     text-align: left;
     border: 1px solid #ddd;
 }
 
-th {
+.contact-page th {
     background-color: #f2f2f2;
     font-weight: bold;
 }
 
-tbody tr:nth-child(even) {
+.contact-page tbody tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-tbody tr:hover {
+.contact-page tbody tr:hover {
     background-color: #f1f1f1;
 }
 
-td {
+.contact-page td {
     color: #333;
 }
 
 /* Optional: Styling for the table's borders */
-table, th, td {
+.contact-page table, .contact-page th, .contact-page td {
     border: 1px solid #ddd;
 }
 
 /* Table Header and Footer Styling */
-th {
+.contact-page th {
     background-color: #f2f2f2;
     font-weight: bold;
 }
