@@ -48,7 +48,78 @@
 
     <main class="main-content">
         <h2>Contact Us</h2>
-        <p>This site was created as part of a web development training project. It demonstrates how to organize files, create navigation, and link pages together.</p>
+        <p>Network with me.</p>
+    </main>
+
+      <section>
+            <h3>Get in Touch</h3>
+            <form name="contact" method="get" action="success.html">
+                <fieldset>
+                    <legend>Your Information</legend>
+                    <!-- Form Fields -->
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                   <!-- Preferred Contact Method (Radio Buttons) -->
+
+<!-- Dropdown to select who is contacting you -->
+<label for="contact-role">Who is contacting me?</label>
+<select id="contact-role" name="contact-role">
+    <option value="recruiter">Recruiter</option>
+    <option value="student">Student</option>
+</select>
+
+<!-- Radio Buttons for Day One or One Day -->
+<label>Start Today:</label>
+<input type="radio" id="day-one" name="contact-method" value="day-one">
+<label for="day-one">Day One</label>
+
+<input type="radio" id="one-day" name="contact-method" value="one-day">
+<label for="one-day">One Day</label>
+
+<!-- Submit and Reset Buttons -->
+<button type="submit">Submit</button>
+<button type="reset">Reset</button>
+
+
+                </fieldset>
+            </form>
+        </section>
+
+
+        <section>
+            <table>
+    <caption>Upcoming Adventures</caption>
+    <thead>
+        <tr>
+            <th scope="col">Event</th>
+            <th scope="col">Date</th>
+            <th scope="col">Location</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Concert - Tame Impala</td>
+            <td>Nov 6, 2025</td>
+            <td>Austin, Texas</td>
+        </tr>
+        <tr>
+            <td>Concert - La La Land</td>
+            <td>Feb 14, 2025</td>
+            <td>Austin, Texas</td>
+        </tr>
+        <tr>
+            <td>Birthday</td>
+            <td>Mar 29, 2025</td>
+            <td>Oregon</td>
+        </tr>
+    </tbody>
+</table>
+
+        </section>
     </main>
 
     <footer class="plain-footer">

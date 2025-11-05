@@ -92,3 +92,156 @@ img { max-width: 100%; height: auto; }
 .plain-footer li {
   margin: 0.25rem 0;
 }
+
+/* Basic Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Form Container */
+section {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+/* Label Styling */
+label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+    color: #333;
+}
+
+/* Input Fields (Name, Email) */
+input[type="text"], input[type="email"] {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 12px; /* Increased padding for bigger input */
+    width: 100%; /* Full width to use the container space */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px; /* Increased font size for better readability */
+}
+
+/* Dropdown and Radio Buttons */
+select, input[type="radio"] {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+/* Radio Button Label Styling */
+input[type="radio"] + label {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 16px;
+}
+
+/* Submit and Reset Buttons */
+button {
+    background-color: #002b02;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button[type="reset"] {
+    background-color: #610801;
+}
+
+button:hover {
+    background-color: #d9e2da;
+}
+
+button[type="reset"]:hover {
+    background-color: #110100;
+}
+
+
+/* Basic Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+caption {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    background-color: #1b0144;
+    color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+td {
+    color: #333;
+}
+
+/* Optional: Styling for the table's borders */
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+/* Table Header and Footer Styling */
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+
