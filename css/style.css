@@ -354,6 +354,87 @@ header .logo {
     5px -13px 25px #808080;
 }
 
+.team-page .footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 3rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.team-page .footer-column {
+  flex: 1 1 220px;
+}
+
+.team-page .footer-column h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fdfcfc;
+}
+
+.team-page .footer-column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.team-page .footer-column li + li {
+  margin-top: 0.5rem;
+}
+
+.team-page .footer-column a {
+  color: #74b8ec;
+  text-decoration: none;
+}
+
+.team-page .footer-column a:hover,
+.team-page .footer-column a:focus {
+  text-decoration: underline;
+}
+
+.team-page .footer-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.team-page .footer-nav {
+  text-align: right;
+}
+
+.team-page .footer-nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .team-page .footer {
+    flex-direction: column;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .team-page .footer-column,
+  .team-page .footer-nav {
+    text-align: center;
+  }
+
+  .team-page .footer-nav ul {
+    align-items: center;
+  }
+
+}
+
 /* Team Section Styling */
 .team {
   display: flex;
