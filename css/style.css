@@ -507,3 +507,183 @@ header .logo {
     width: 100%; /* 1 item per row on mobile devices */
   }
 }
+
+/* Theme toggle button */
+.theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 12px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #ffffff;
+  color: #111;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+  z-index: 6;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle .icon {
+  width: 28px;
+  height: 28px;
+  background-image: url("../images/accessible-icon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+  filter: saturate(0.6);
+}
+
+body.dark .theme-toggle {
+  background: #0b1726;
+  color: #e7ecf3;
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+}
+
+body.dark .theme-toggle .icon {
+  filter: invert(1) brightness(1.1);
+}
+
+/* Dark theme base */
+body.dark {
+  background-color: #0f1620;
+  color: #e7ecf3;
+}
+
+body.dark header {
+  background-color: #0c2b40;
+  color: #e7ecf3;
+}
+
+body.dark .main-nav {
+  background-color: #0a1c2b;
+}
+
+body.dark .main-nav a {
+  color: #f1f5f9;
+}
+
+body.dark .main-nav a:hover,
+body.dark .main-nav a:focus {
+  background-color: #1d3557;
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+body.dark .sidebar {
+  background-color: #162235;
+  color: #e7ecf3;
+}
+
+body.dark footer,
+body.dark .plain-footer {
+  background-color: #0b141f;
+  color: #e7ecf3;
+}
+
+body.dark .plain-footer a,
+body.dark footer a {
+  color: #9ed2ff;
+}
+
+body.dark .plain-footer a:hover,
+body.dark footer a:hover {
+  color: #ffffff;
+}
+
+body.dark a:link,
+body.dark a:visited {
+  color: #9ed2ff;
+}
+
+body.dark a:hover {
+  color: #ffffff;
+}
+
+/* Dark theme: contact page */
+body.dark .contact-page section {
+  background-color: #0f1826;
+  color: #e7ecf3;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+}
+
+body.dark .contact-page label {
+  color: #e7ecf3;
+}
+
+body.dark .contact-page input[type="text"],
+body.dark .contact-page input[type="email"],
+body.dark .contact-page textarea,
+body.dark .contact-page select {
+  background-color: #0e1522;
+  border: 1px solid #2d405b;
+  color: #e7ecf3;
+}
+
+body.dark .contact-page input[type="radio"] + label {
+  color: #e7ecf3;
+}
+
+body.dark .contact-page table {
+  background-color: #0f1826;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+body.dark .contact-page th {
+  background-color: #142136;
+  color: #e7ecf3;
+}
+
+body.dark .contact-page td {
+  color: #e7ecf3;
+  border: 1px solid #25344c;
+}
+
+body.dark .contact-page tbody tr:nth-child(even) {
+  background-color: #131f32;
+}
+
+body.dark .contact-page tbody tr:hover {
+  background-color: #1b2c45;
+}
+
+/* Dark theme: team page */
+body.dark .team-member {
+  background-color: #111927;
+  color: #e7ecf3;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+body.dark .team-member h3 {
+  color: #e7ecf3;
+}
+
+body.dark .team-member figcaption {
+  color: #9ed2ff;
+}
+
+body.dark .team-page .footer {
+  background-color: #0b141f;
+  color: #e7ecf3;
+}
+
+body.dark .team-page .footer-column h3 {
+  color: #e7ecf3;
+}
+
+body.dark .team-page .footer-column a {
+  color: #9ed2ff;
+}
+
+body.dark .team-page .team-heading-3d {
+  color: #bcd7ff;
+}

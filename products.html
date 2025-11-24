@@ -42,6 +42,11 @@
         </ul>
     </nav>
 
+    <!-- Global theme toggle -->
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+        <span class="icon" aria-hidden="true"></span>
+    </button>
+
     <!-- Reusing the header -->
     <header>
         <h1>Jorge's Web Page</h1>
@@ -104,6 +109,32 @@
         <p>&copy; 2025 Jorge's Web Page</p>
     </footer>
 
+    <script>
+        (function () {
+            const body = document.body;
+            const toggle = document.getElementById("theme-toggle");
+            if (!toggle) return;
+
+            const saved = localStorage.getItem("colorMode");
+            const initial = saved === "dark" ? "dark" : "light";
+            applyTheme(initial);
+
+            toggle.addEventListener("click", () => {
+                const next = body.classList.contains("dark") ? "light" : "dark";
+                applyTheme(next);
+            });
+
+            function applyTheme(mode) {
+                body.classList.toggle("dark", mode === "dark");
+                localStorage.setItem("colorMode", mode);
+                toggle.setAttribute("aria-pressed", mode === "dark");
+                toggle.setAttribute(
+                    "title",
+                    mode === "dark" ? "Switch to light mode" : "Switch to dark mode"
+                );
+            }
+        })();
+    </script>
 </body>
 </html>
 

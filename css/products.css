@@ -266,6 +266,51 @@ footer {
   }
 }
 
+/* Dark theme overrides */
+body.dark {
+  background-color: #0f1620;
+}
 
+body.dark header {
+  background-color: #0c2b40;
+}
 
+body.dark nav.main-nav {
+  background-color: #0a1c2b;
+}
+
+body.dark nav.main-nav a {
+  color: #f1f5f9;
+}
+
+body.dark nav.main-nav a:hover {
+  background-color: #1d3557;
+  color: #ffffff;
+}
+
+body.dark .product {
+  background-color: #111927;
+  border: 1px solid #24344c;
+  color: #e7ecf3;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+}
+
+body.dark .product.featured {
+  background-color: #111927;
+  border: 1px solid #24344c;
+}
+
+body.dark .product h2,
+body.dark .product h3 {
+  color: #bcd7ff;
+}
+
+body.dark .product p {
+  color: #d8e4f5;
+}
+
+body.dark footer {
+  background-color: #0b141f;
+  color: #e7ecf3;
+}
 
