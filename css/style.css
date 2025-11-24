@@ -209,7 +209,7 @@ body {
 }
 
 /* Submit and Reset Buttons */
-.contact-page button {
+.contact-page button:not(.theme-toggle) {
     background-color: #002b02;
     color: white;
     border: none;
@@ -222,15 +222,15 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.contact-page button[type="reset"] {
+.contact-page button[type="reset"]:not(.theme-toggle) {
     background-color: #610801;
 }
 
-.contact-page button:hover {
+.contact-page button:not(.theme-toggle):hover {
     background-color: #d9e2da;
 }
 
-.contact-page button[type="reset"]:hover {
+.contact-page button[type="reset"]:not(.theme-toggle):hover {
     background-color: #110100;
 }
 
@@ -511,10 +511,10 @@ header .logo {
 /* Theme toggle button */
 .theme-toggle {
   position: fixed;
-  top: 10px;
+  top: 50%;
   right: 12px;
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.12);
   background: #ffffff;
@@ -524,17 +524,18 @@ header .logo {
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
   cursor: pointer;
   z-index: 6;
+  transform: translateY(-50%);
   transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .theme-toggle:hover {
-  transform: translateY(-1px);
+  transform: translateY(calc(-50% - 1px));
   box-shadow: 0 12px 22px rgba(0, 0, 0, 0.2);
 }
 
 .theme-toggle .icon {
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   background-image: url("../images/accessible-icon.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -551,6 +552,21 @@ body.dark .theme-toggle {
 
 body.dark .theme-toggle .icon {
   filter: invert(1) brightness(1.1);
+}
+
+@media (max-width: 700px) {
+  .theme-toggle {
+    top: auto;
+    bottom: 14px;
+    right: 14px;
+    transform: none;
+    width: 44px;
+    height: 44px;
+  }
+
+  .theme-toggle:hover {
+    transform: translateY(-1px);
+  }
 }
 
 /* Dark theme base */
