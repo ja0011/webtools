@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/layout.css"> <!-- 8.1-->
     <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
 
 </head>
@@ -56,49 +57,56 @@
     <main class="main-content">
         <h2>Contact Us</h2>
         <p>Network with me.</p>
-    </main>
 
-      <section>
-            <h3>Get in Touch</h3>
-            <form name="contact" method="get" action="success.html">
-                <fieldset>
-                    <legend>Your Information</legend>
-                    <!-- Form Fields -->
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
-                   <!-- Preferred Contact Method (Radio Buttons) -->
+      <section class="w3-card-4 w3-margin">
+            <div class="w3-container w3-dark-gray">
+                <h3>Get in Touch</h3>
+            </div>
+            <div class="w3-container">
+                <form class="w3-container" name="contact" method="get" action="success.html">
+                    <fieldset class="w3-margin-bottom">
+                        <legend>Your Information</legend>
+                        <!-- Form Fields -->
+                        <label for="name">Name:</label>
+                        <input class="w3-input w3-border w3-margin-bottom" type="text" id="name" name="name" required>
+                        <label for="email">Email:</label>
+                        <input class="w3-input w3-border w3-margin-bottom" type="email" id="email" name="email" required>
+                        <label for="message">Message:</label>
+                        <textarea class="w3-input w3-border w3-margin-bottom" id="message" name="message" required></textarea>
+                       <!-- Preferred Contact Method (Radio Buttons) -->
 
-<!-- Dropdown to select who is contacting you -->
-<label for="contact-role">Who is contacting me?</label>
-<select id="contact-role" name="contact-role">
-    <option value="recruiter">Recruiter</option>
-    <option value="student">Student</option>
-</select>
+        <!-- Dropdown to select who is contacting you -->
+        <label for="contact-role">Who is contacting me?</label>
+        <select class="w3-select w3-border w3-margin-bottom" id="contact-role" name="contact-role">
+            <option value="recruiter">Recruiter</option>
+            <option value="student">Student</option>
+        </select>
 
-<!-- Radio Buttons for Day One or One Day -->
-<label>Start Today:</label>
-<input type="radio" id="day-one" name="contact-method" value="day-one">
-<label for="day-one">Day One</label>
+        <!-- Radio Buttons for Day One or One Day -->
+        <label>Start Today:</label>
+        <div class="w3-margin-bottom">
+            <input class="w3-radio" type="radio" id="day-one" name="contact-method" value="day-one">
+            <label for="day-one">Day One</label>
 
-<input type="radio" id="one-day" name="contact-method" value="one-day">
-<label for="one-day">One Day</label>
+            <input class="w3-radio" type="radio" id="one-day" name="contact-method" value="one-day">
+            <label for="one-day">One Day</label>
+        </div>
 
-<!-- Submit and Reset Buttons -->
-<button type="submit">Submit</button>
-<button type="reset">Reset</button>
+        <!-- Submit and Reset Buttons -->
+        <button class="w3-button w3-blue w3-margin-right" type="submit">Submit</button>
+        <button class="w3-button w3-border" type="reset">Reset</button>
 
 
-                </fieldset>
-            </form>
+                    </fieldset>
+                </form>
+            </div>
+            <footer class="w3-container w3-light-grey">
+                <p>We typically respond within one business day.</p>
+            </footer>
         </section>
 
-
         <section>
-            <table>
+            <table class="w3-table-all w3-hoverable">
     <caption>Upcoming Adventures</caption>
     <thead>
         <tr>
@@ -127,6 +135,7 @@
 </table>
 
         </section>
+
     </main>
 
     <footer class="plain-footer">
