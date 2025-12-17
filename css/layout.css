@@ -66,6 +66,10 @@ html, body * {
     clear: both;
 }
 
+footer {
+    clear: both;
+}
+
 /* Mobile layout: stack sidebar and content */
 @media (max-width: 768px) {
   .sidebar { float: none; width: auto; margin: 1rem 0; }
