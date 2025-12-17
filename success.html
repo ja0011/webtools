@@ -36,17 +36,13 @@
         <ul>
             <a href="index.html">Home</a>|
             <a href="about_us.html">About</a> |
-            <a href="contact_us.html">Contact</a> |
+            <!-- <a href="contact_us.html">Contact</a> | -->
             <a href="team.html">Team</a> |
-            <a href="blank">Projects</a>
+            <a href="projects.html">Projects</a>
         </ul>
     </nav>
 
 <body>
-    <!-- Global theme toggle -->
-    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
-        <span class="icon" aria-hidden="true"></span>
-    </button>
     <header>
         <h1>Jorge's Web Page</h1>
     </header>
@@ -62,11 +58,6 @@
             <div class="w3-container">
                 <p>Thanks for reaching out. We will follow up soon.</p>
                 <button class="w3-button w3-green w3-margin-bottom" onclick="location.href='index.html'">Return home</button>
-                <ul class="w3-ul w3-border">
-                    <li>Visit Products for the catalog.</li>
-                    <li>See Team to learn who built this.</li>
-                    <li>Use Contact if you need to add details.</li>
-                </ul>
             </div>
             <footer class="w3-container w3-light-grey">
                 <p>Replies usually go out within a day.</p>
@@ -74,31 +65,5 @@
         </section>
     </main>
 
-    <script>
-        (function () {
-            const body = document.body;
-            const toggle = document.getElementById("theme-toggle");
-            if (!toggle) return;
-
-            const saved = localStorage.getItem("colorMode");
-            const initial = saved === "dark" ? "dark" : "light";
-            applyTheme(initial);
-
-            toggle.addEventListener("click", () => {
-                const next = body.classList.contains("dark") ? "light" : "dark";
-                applyTheme(next);
-            });
-
-            function applyTheme(mode) {
-                body.classList.toggle("dark", mode === "dark");
-                localStorage.setItem("colorMode", mode);
-                toggle.setAttribute("aria-pressed", mode === "dark");
-                toggle.setAttribute(
-                    "title",
-                    mode === "dark" ? "Switch to light mode" : "Switch to dark mode"
-                );
-            }
-        })();
-    </script>
 </body>
 </html>

@@ -45,17 +45,14 @@
  <nav class="main-nav">
     <div class="nav-links">
       <a href="index.html">Home</a>
-      <a href="contact_us.html">Contact</a>
+      <!-- <a href="contact_us.html">Contact</a> -->
       <a href="team.html" class="active">Team</a>
+      <a href="projects.html">Projects</a>
     </div>
     <a href="#" class="sign-in">Sign In</a>
   </nav> 
 
   <!-- Global theme toggle -->
-  <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
-    <span class="icon" aria-hidden="true"></span>
-  </button>
-
   <main>
     <section class="w3-card-4 w3-margin">
       <div class="w3-container w3-dark-gray">
@@ -148,37 +145,13 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about_us.html">About</a></li>
-        <li><a href="contact_us.html">Contact</a></li>
+        <!-- <li><a href="contact_us.html">Contact</a></li> -->
+        <li><a href="projects.html">Projects</a></li>
       </ul>
     </nav>
   </footer>
 
-  <script>
-    (function () {
-        const body = document.body;
-        const toggle = document.getElementById("theme-toggle");
-        if (!toggle) return;
-
-        const saved = localStorage.getItem("colorMode");
-        const initial = saved === "dark" ? "dark" : "light";
-        applyTheme(initial);
-
-        toggle.addEventListener("click", () => {
-            const next = body.classList.contains("dark") ? "light" : "dark";
-            applyTheme(next);
-        });
-
-        function applyTheme(mode) {
-            body.classList.toggle("dark", mode === "dark");
-            localStorage.setItem("colorMode", mode);
-            toggle.setAttribute("aria-pressed", mode === "dark");
-            toggle.setAttribute(
-                "title",
-                mode === "dark" ? "Switch to light mode" : "Switch to dark mode"
-            );
-        }
-    })();
-  </script>
+  
 </body>
 
 </html>

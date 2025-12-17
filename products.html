@@ -37,16 +37,11 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about_us.html">About</a></li>
-            <li><a href="contact_us.html">Contact</a></li>
+            <!-- <li><a href="contact_us.html">Contact</a></li> -->
             <li><a href="team.html">Team</a></li>
             <li><a href="projects.html">Projects</a></li>
         </ul>
     </nav>
-
-    <!-- Global theme toggle -->
-    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
-        <span class="icon" aria-hidden="true"></span>
-    </button>
 
     <!-- Reusing the header -->
     <header>
@@ -119,34 +114,6 @@
         <p>&copy; 2025 Jorge's Web Page</p>
     </footer>
 
-    <script>
-        (function () {
-            const body = document.body;
-            const toggle = document.getElementById("theme-toggle");
-            if (!toggle) return;
-
-            const saved = localStorage.getItem("colorMode");
-            const initial = saved === "dark" ? "dark" : "light";
-            applyTheme(initial);
-
-            toggle.addEventListener("click", () => {
-                const next = body.classList.contains("dark") ? "light" : "dark";
-                applyTheme(next);
-            });
-
-            function applyTheme(mode) {
-                body.classList.toggle("dark", mode === "dark");
-                localStorage.setItem("colorMode", mode);
-                toggle.setAttribute("aria-pressed", mode === "dark");
-                toggle.setAttribute(
-                    "title",
-                    mode === "dark" ? "Switch to light mode" : "Switch to dark mode"
-                );
-            }
-        })();
-    </script>
+    
 </body>
 </html>
-
-
-

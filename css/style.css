@@ -20,6 +20,35 @@ header {
   background-color: #011f29;
   color: #f8f7f7;
 }
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: inherit;
+}
+
+.main-nav a {
+  color: #f8f7f7;
+  padding: 0.5rem 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.main-nav a:link,
+.main-nav a:visited {
+  color: #f8f7f7;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  background-color: #02384c;
+  color: #ffffff;
+  text-decoration: underline;
+}
 
 .team-page .main-nav {
   display: flex;

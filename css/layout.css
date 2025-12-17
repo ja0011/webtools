@@ -38,23 +38,32 @@ html, body * {
 
 
 .figure-right {
-    max-width: 55%;
+    max-width: 48%;
     height: auto;
     float: right;
-    padding: 0 0 0 2rem;
+    margin: 0 0 1rem 1.25rem;
+    padding: 0;
 }
 
 .figure-left {
-    max-width: 55%;
+    max-width: 48%;
     height: auto;
     float: left;
-    padding: 2rem 2rem 2rem 0;
+    margin: 0 1.25rem 1rem 0;
+    padding: 0;
 }
 
 .clearfix::after {
     display: block;
     clear: both;
     content: "";
+}
+
+/* Ensure floating figures don't overlap the footer */
+.main-content::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
 /* Mobile layout: stack sidebar and content */
@@ -65,4 +74,3 @@ html, body * {
 }
 
 /* (intentionally no wide-screen reservation here; pre-overlap state) */
-

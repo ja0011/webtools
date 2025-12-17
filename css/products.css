@@ -205,7 +205,7 @@ header {
 
 nav.main-nav {
   position: static; /* override fixed nav in layout.css */
-  background-color: lightgray;
+  background-color: #011f29;
   padding: 8px 0;
 }
 
@@ -227,12 +227,12 @@ nav.main-nav a {
   display: inline-block;
   border-radius: 8px 8px 0 0;
   margin: 0;
-  color: black;
+  color: #f8f7f7;
 }
 
 nav.main-nav a:hover {
-  background-color: darkslategray;
-  color: white;
+  background-color: #02384c;
+  color: #ffffff;
 }
 
 /* Footer */
@@ -313,4 +313,3 @@ body.dark footer {
   background-color: #0b141f;
   color: #e7ecf3;
 }
-

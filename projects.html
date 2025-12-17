@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Jorge Acosta</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
+    <style>
+        .weather-card {
+            display: grid;
+            gap: 12px;
+            padding: 20px;
+            border-radius: 8px;
+            background: #1f2937;
+            color: #f3f4f6;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+        }
+        .weather-form {
+            display: grid;
+            gap: 10px;
+        }
+        .weather-form label {
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+        .weather-form input,
+        .weather-form button {
+            padding: 10px 12px;
+            font-size: 1rem;
+            border-radius: 6px;
+            border: 1px solid #374151;
+        }
+        .weather-form button {
+            background: #10b981;
+            color: #0b0f16;
+            border: none;
+            cursor: pointer;
+            font-weight: 700;
+        }
+        .weather-form button:hover {
+            background: #0ea374;
+        }
+        .weather-result {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.1rem;
+            min-height: 36px;
+        }
+        .weather-temp {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fbbf24;
+        }
+        .weather-emoji {
+            font-size: 2.4rem;
+        }
+        .weather-error {
+            color: #f87171;
+            min-height: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class ="main-nav">
+        <ul>
+            <a href="index.html">Home</a>|
+            <!-- <a href="about_us.html">About</a> | -->
+            <!-- <a href="contact_us.html">Contact</a> | -->
+            <!-- <a href="team.html">Team</a> | -->
+            <!-- <a href="products.html">Products</a> | -->
+            <a href="projects.html">Projects</a>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Projects</h1>
+    </header>
+
+    <section class="w3-container w3-margin">
+        <div class="w3-card-4">
+            <div class="w3-container w3-dark-gray">
+                <h3>National Parks Weather</h3>
+            </div>
+            <div class="w3-container">
+                <p>Use the browser version of the parks weather app: pick a National park and get the current forecast.</p>
+            </div>
+            <footer class="w3-container w3-light-grey">
+                <p>Powered by OpenWeather.</p>
+            </footer>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <h2>Project: National Parks Weather (Web)</h2>
+        <section class="weather-card">
+            <form id="parkWeatherForm" class="weather-form">
+                <label for="parkInput">Enter US national park name:</label>
+                <input id="parkInput" name="parkInput" list="parkOptions" placeholder="e.g., Yosemite National Park" required />
+                <datalist id="parkOptions">
+                    <option value="Yellowstone National Park"></option>
+                    <option value="Yosemite National Park"></option>
+                    <option value="Grand Canyon National Park"></option>
+                    <option value="Zion National Park"></option>
+                    <option value="Rocky Mountain National Park"></option>
+                </datalist>
+                <button type="submit">Get Weather</button>
+            </form>
+            <div id="weatherResult" class="weather-result" aria-live="polite">
+                <span class="weather-temp" id="weatherTemp"></span>
+                <span class="weather-emoji" id="weatherEmoji"></span>
+                <span id="weatherDesc"></span>
+            </div>
+            <div id="weatherError" class="weather-error" aria-live="assertive"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Jorge Acosta</p>
+    </footer>
+
+    <script>
+        const PARKS = [
+            { name: "Yellowstone National Park", lat: 44.6, lon: -110.5 },
+            { name: "Yosemite National Park", lat: 37.8651, lon: -119.5383 },
+            { name: "Grand Canyon National Park", lat: 36.1069, lon: -112.1129 },
+            { name: "Zion National Park", lat: 37.2982, lon: -113.0263 },
+            { name: "Rocky Mountain National Park", lat: 40.3428, lon: -105.6836 },
+        ];
+
+        const parkLookup = PARKS.reduce((acc, park) => {
+            acc[park.name.toLowerCase()] = park;
+            return acc;
+        }, {});
+
+        const API_KEY = "1216458ebddf12daa1de83a13505260c";
+        const form = document.getElementById("parkWeatherForm");
+        const weatherTemp = document.getElementById("weatherTemp");
+        const weatherEmoji = document.getElementById("weatherEmoji");
+        const weatherDesc = document.getElementById("weatherDesc");
+        const weatherError = document.getElementById("weatherError");
+        const parkInput = document.getElementById("parkInput");
+
+        const getWeatherEmoji = (id) => {
+            if (id >= 200 && id <= 232) return "⛈️";
+            if (id >= 300 && id <= 321) return "🌦️";
+            if (id >= 500 && id <= 531) return "🌧️";
+            if (id >= 600 && id <= 622) return "❄️";
+            if (id >= 701 && id <= 741) return "🌫️";
+            if (id === 762) return "🌋";
+            if (id === 771) return "💨";
+            if (id === 781) return "🌪️";
+            if (id === 800) return "☀️";
+            if (id >= 801 && id <= 804) return "☁️";
+            return "";
+        };
+
+        const displayError = (message) => {
+            weatherTemp.textContent = "";
+            weatherEmoji.textContent = "";
+            weatherDesc.textContent = "";
+            weatherError.textContent = message;
+        };
+
+        const displayWeather = ({ temp, id, description }) => {
+            weatherTemp.textContent = `${Math.round(temp)}\u00B0F`;
+            weatherEmoji.textContent = getWeatherEmoji(id);
+            weatherDesc.textContent = description;
+            weatherError.textContent = "";
+        };
+
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            const parkName = parkInput.value.trim();
+            if (!parkName) {
+                displayError("Please type a park name.");
+                return;
+            }
+
+            const park = parkLookup[parkName.toLowerCase()];
+            if (!park) {
+                displayError("Park not found. Use one from the list.");
+                return;
+            }
+
+            const url = `https://api.openweathermap.org/data/2.5/weather?lat=${park.lat}&lon=${park.lon}&appid=${API_KEY}&units=imperial`;
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    displayError("Weather unavailable right now.");
+                    return;
+                }
+                const data = await response.json();
+                if (data.cod !== 200) {
+                    displayError("Weather unavailable right now.");
+                    return;
+                }
+                displayWeather({
+                    temp: data.main.temp,
+                    id: data.weather[0].id,
+                    description: data.weather[0].description,
+                });
+            } catch (error) {
+                displayError("Connection issue. Try again.");
+            }
+        });
+    </script>
+</body>
+</html>
