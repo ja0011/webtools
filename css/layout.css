@@ -20,6 +20,10 @@ html, body * {
     margin: auto;
 }
 
+.main-content section {
+    overflow: auto; /* contain floated figures so following content and footer don't overlap */
+}
+
 .page-header{
     text-align: center;
     margin-bottom: 2rem;
